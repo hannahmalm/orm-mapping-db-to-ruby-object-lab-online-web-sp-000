@@ -39,7 +39,7 @@ class Student
     SQL
     DB[:conn].execute(sql).map do |row|
     self.new_from_db(row)
-    end.first
+    end.first #add .first to only return the first instance 
   end
 
 
