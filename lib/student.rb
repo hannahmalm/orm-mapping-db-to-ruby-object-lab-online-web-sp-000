@@ -74,7 +74,7 @@ class Student
     ORDER BY(grade) 
     DESC LIMIT (?);
     SQL
-    DB[:conn].execute(sql).map do |row|
+    DB[:conn].execute(sql, X).map do |row|
     self.new_from_db(row)
   end
 end
