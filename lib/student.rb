@@ -68,7 +68,7 @@ class Student
 
   def self.first_X_students_in_grade_10(students_name)
     sql = <<-SQL
-    SELECT DISTINCT
+    SELECT *
     FROM students
     WHERE grade = 10 && students_name = ?
     ORDER BY(grade) 
