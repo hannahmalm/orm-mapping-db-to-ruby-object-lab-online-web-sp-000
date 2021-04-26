@@ -56,10 +56,11 @@ class Student
   end
 
  def self.all_students_in_grade_X(x)
+   #whenever you pass in an ? in the SQL statement you also need to pass in a varialbe up top and within the .execute statement
     sql = <<-SQL
       SELECT *
       FROM students
-      WHERE grade = ?
+      WHERE grade = ? 
     SQL
     DB[:conn].execute(sql, x).map do |row|
     self.new_from_db(row)
