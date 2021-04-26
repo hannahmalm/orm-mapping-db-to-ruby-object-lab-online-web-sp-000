@@ -70,7 +70,7 @@ class Student
     sql = <<-SQL
     SELECT *
     FROM students
-    WHERE grade = 10 && students_name = ?
+    WHERE grade = 10 
     ORDER BY(grade) 
     DESC LIMIT (?);
     SQL
